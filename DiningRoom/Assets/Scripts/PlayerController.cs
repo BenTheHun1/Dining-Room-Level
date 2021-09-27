@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public CameraController cc;
 
+    public Transform groundCheck;
+    private float groundDistance = 0.4f;
+    public LayerMask groundMask;
 
     private float speed = 4f;
     private float gravity = -9.81f * 6;
@@ -24,6 +27,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isOnGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isOnGround && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -36,7 +46,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isOnGround)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            isOnGround = false;
         }
 
 

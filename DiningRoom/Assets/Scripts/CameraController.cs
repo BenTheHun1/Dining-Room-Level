@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour
     public Transform playerBody;
     private float xRotation = 0f;
 
+    private RaycastHit hit;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -19,6 +21,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = gameObject.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            playerBody.gameObject.GetComponent<PlayerController>().ray = hit;
+        }
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

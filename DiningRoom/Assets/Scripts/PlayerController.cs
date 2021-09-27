@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public Vector3 velocity;
     public bool isOnGround;
 
+    public GameObject bullet;
+    public RaycastHit ray;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +53,13 @@ public class PlayerController : MonoBehaviour
 
 
         controller.Move(velocity * Time.deltaTime);
+
+        //Shooting
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        { 
+            Instantiate(bullet, gameObject.transform.TransformPoint(new Vector3(0.5f, 0.6f, 1.2f)), gameObject.transform.rotation);
+        }
+
+
     }
 }

@@ -5,12 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private PlayerController pl;
-    public int timeToDestroy;
+    public float timeToDestroy;
+    public int speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000, ForceMode.Force);
+        gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed * 100, ForceMode.Force);
         StartCoroutine(Despawn());
     }
 

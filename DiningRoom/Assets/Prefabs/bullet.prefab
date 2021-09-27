@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 0.5
-  speed: 100
+  speed: 50
 --- !u!136 &928189090952926649
 CapsuleCollider:
   m_ObjectHideFlags: 0

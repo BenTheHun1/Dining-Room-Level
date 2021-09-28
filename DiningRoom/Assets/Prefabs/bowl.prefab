@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 1458379998372013395}
   - component: {fileID: 2563374423456393974}
   - component: {fileID: 321471074118164028}
-  - component: {fileID: -6065163484860702758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,17 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-6065163484860702758
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267250482543067113}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 477525350536967170, guid: 87697a88282e87b4f951fc43a7a35bed, type: 3}

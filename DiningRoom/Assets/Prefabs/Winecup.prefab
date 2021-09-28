@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2795527781528703759}
   - component: {fileID: 1253247688620514474}
   - component: {fileID: 3927307547389651040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Winecup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
